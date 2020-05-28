@@ -1,0 +1,48 @@
+<nav class="mb-1 navbar navbar-expand-lg navbar-dark elegant-color-dark fixed-top px-4">
+    <a routerLink="/" class="navbar-brand mb-1"><i class="fab fa-shopware mr-2"></i>Shopware</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"
+        aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent-333">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a routerLink="/products" class="nav-link">Alla Produkter</a>
+            </li>
+            <li class="nav-item">
+                <a routerLink="/products" class="nav-link">Datorer</a>
+            </li>
+            <li class="nav-item">
+                <a routerLink="/products" class="nav-link">Smartphones</a>
+            </li>
+            <li class="nav-item">
+                <a routerLink="/products" class="nav-link">Övrigt</a>
+            </li>
+        </ul>
+
+        <ul class="navbar-nav nav-flex-icons ml-auto">
+            <!-- ShoppingCart -->
+            <li class="nav-item dropdown">
+                <a class="nav-link mr-4" type="button" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false">
+                    {{ totalQuantity }}
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+                <div id="shopping-cart" class="dropdown-menu dropdown-menu-right z-depth-2 shopping-cart">
+                    <app-shopping-cart></app-shopping-cart>
+                </div>
+            </li>
+
+            <!-- UserSettings -->
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false">
+                    <i class="fas fa-user"></i>
+                </a>
+                <div id="userDropdown" class="dropdown-menu dropdown-menu-right z-depth-2 px-2">
+                    <app-user-dropdown></app-user-dropdown>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>

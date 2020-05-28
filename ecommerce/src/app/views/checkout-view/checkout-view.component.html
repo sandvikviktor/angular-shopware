@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="list-group-flush pt">
+    <div *ngFor="let product of shoppingcart | async" class="list-group-item">
+
+     <app-checkout-product [item]="product"></app-checkout-product>
+
+    </div>
+    
+  <div class="list-group-flush pt-4">
+    <div class="list-group-item d-flex align-items-center justify-content-between">
+      <h4 class="ml-4">
+        <strong>Totalt:</strong>
+        <strong class="ml-3">{{shoppingCartTotal}} SEK</strong>
+      </h4>
+      <div class="d-flex align-items-center">
+        <span *ngIf=(!userInlogged) class="mr-4 text-muted">Logga in för att lägga en order.</span>
+        <button [disabled]=(!userInlogged) (click)="checkout()" type="button" class="btn btn-indigo btn-rounded">
+          Lägg Order
+          <i class="fas fa-angle-right right"></i>
+        </button>
+      </div>
+      
+    </div>
+  </div>
+</div>

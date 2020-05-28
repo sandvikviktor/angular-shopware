@@ -1,0 +1,79 @@
+/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700&display=swap");
+
+/* Body */
+html {
+  background: lightgrey;
+  overflow: hidden;
+  --scrollbarBG: rgba(207, 216, 220, 0);
+  --thumbBG: rgb(221, 221, 221);
+}
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500 !important;
+  background-color: rgb(255, 255, 255);
+  color: black;
+  overflow-x: hidden;
+  height: 100vh;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+}
+body::-webkit-scrollbar,
+#order-card::-webkit-scrollbar {
+  width: 11px;
+}
+body::-webkit-scrollbar-track,
+#order-card::-webkit-scrollbar-track {
+  background: var(--scrollbarBG);
+}
+body::-webkit-scrollbar-thumb,
+#order-card::-webkit-scrollbar-thumb {
+  background-color: var(--thumbBG);
+  border-radius: 6px;
+  border: 3px solid var(--scrollbarBG);
+}
+
+/* Utilities */
+.bg-color {
+  background-color: #222433;
+}
+.min-height {  
+  min-height: 100vh;  
+}
+.min-width{
+  min-width: 450px
+}
+.custom-margin-top {
+  margin-top: 4.8rem;
+}
+.pt {
+  padding-top: 5em !important;
+}
+.overflow {
+  overflow: hidden !important;
+}
+.btn-indigo{
+  background-color: rgb(71, 83, 161) !important;
+}
+.image-width {
+  max-width: 100px;
+}
+.checkout-image-width{
+  max-width: 150px;
+}
+
+td{
+  vertical-align: middle !important;
+  padding: 3em 0 !important;
+  overflow: hidden;
+}
+li {
+  list-style: none;
+}
+
+/* Navbar */
+.user-dropdown{
+  min-width: 10em;
+}

@@ -1,0 +1,45 @@
+<div id="register" class="vh-100 w-100 d-flex align-items-center">
+    <div class="container my-5 z-10">
+        <!--Section: Content-->
+        <section class="px-md-5 mx-md-5 text-center text-lg-left">
+            <!--Grid row-->
+            <div class="row d-flex grid-row justify-content-center">
+                <!--Grid column-->
+                <div class="col-md-12 col-lg-10 col-xl-6">
+                    <!-- Default form register -->
+
+                    <form [formGroup]="regForm" (ngSubmit)="onSubmit()" class="text-center">
+                        <p class="h4 mb-4 font-weight-normal">Registrera</p>
+
+                        <div class="form-row mb-4">
+                            <div class="col">
+                                <input name="firstName" formControlName="firstName" type="text" class="form-control" [class.is-invalid]="regForm.controls.firstName.invalid && regForm.controls.firstName.touched"  placeholder="Förnamn"
+                                    autoComplete="off">
+                            </div>
+                            <div class="col">
+                                <input name="lastName" formControlName="lastName" type="text" class="form-control" [class.is-invalid]="regForm.controls.lastName.invalid && regForm.controls.lastName.touched"  placeholder="Efternamn"
+                                    autoComplete="off">
+                            </div>
+                        </div>
+
+                        <input name="email" formControlName="email" type="email" class="form-control mb-4" [class.is-invalid]="regForm.controls.email.invalid && regForm.controls.email.touched" placeholder="E-mail"
+                            autoComplete="off">
+
+                        <input name="password" formControlName="password" type="password" class="form-control" [class.is-invalid]="regForm.controls.password.invalid && regForm.controls.password.touched" placeholder="Lösenord">
+
+                        <button [disabled]="!regForm.valid" class="btn btn-indigo my-4 btn-block" type="submit">Skapa nytt konto</button>
+                        <p>
+                            <span>Redan registrerad?</span>
+                            <a routerLink="/login"> Logga in här</a>
+                        </p>
+                    </form>
+                    <!-- Default form register -->
+
+                </div>
+                <!--Grid column-->
+            </div>
+            <!--Grid row-->
+        </section>
+        <!--Section: Content-->
+    </div>
+</div>

@@ -1,0 +1,31 @@
+<div class="order-item z-depth-1 position-relative mb-4">
+    <div id="order-card" class="m-auto overflow">
+        <div class="d-flex align-items-center justify-content-center px-4 pt-4">
+            <h6><strong>Ordnr:</strong> </h6>
+            <h6 class="text-muted ml-2"><strong>{{order._id}}</strong> </h6>
+        </div>
+       
+        <hr />
+
+        <div *ngFor="let item of order.products">
+            <ul id="order-list" class="pt-3 d-flex align-items-center justify-content-between">
+                <li>
+                    <img [src]="item.product.image" alt="" class="image-width" />
+                    <span>{{item.product.name}}</span>
+                </li>
+                <li class="pr-5">
+                    <span class="mr-3">{{item.quantity}}st</span>
+                    <span>{{item.product.price}} sek</span>
+                </li>
+            </ul>
+        </div>
+
+        <div id="order-total-row" class="d-flex align-items-center justify-content-between px-5 pb-3">
+            <div class="text-center ml-2" *ngIf="order.status === 'pending'">
+                <span>Status: <span class="font-italic text-muted">Pågående <i class="far fa-clock"></i></span></span>
+            </div>
+            <div class="d-flex"><h5><strong>Totalt: {{order.total}} sek</strong></h5></div>
+            
+        </div>
+    </div>
+</div>

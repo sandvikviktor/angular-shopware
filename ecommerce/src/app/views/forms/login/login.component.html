@@ -1,0 +1,45 @@
+<div id="login" class="vh-100 w-100 d-flex align-items-center">
+    <div class="container my-5 z-10">
+        <!--Section: Content-->
+        <section class="px-md-5 mx-md-5 text-center text-lg-left">
+            <!--Grid row-->
+            <div class="row d-flex grid-row justify-content-center">
+                <!--Grid column-->
+                <div class="col-md-12 col-lg-10 col-xl-6">
+
+                    <!-- Default form login -->
+                    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="text-center">
+                        <p class="h4 mb-4 font-weight-normal">Logga in</p>
+
+                        <input name="email" formControlName="email" type="email" class="form-control mb-4" [class.is-invalid]="loginForm.controls.email.invalid && loginForm.controls.email.touched" placeholder="E-mail"
+                            autoComplete="off">
+
+                        <input name="password" formControlName="password" type="password" class="form-control mb-4" [class.is-invalid]="loginForm.controls.password.invalid && loginForm.controls.password.touched" placeholder="Lösenord"
+                            autoComplete="off">
+
+                        <div class="d-flex justify-content-around">
+                            <div>
+                                <!-- Forgot password -->
+                                <a routerLink="/login" class="font-weight-normal">Glömt lösenord?</a>
+                            </div>
+                        </div>
+
+                        <!-- Sign in button -->
+                        <button class="btn btn-indigo btn-block my-4" type="submit">Logga in</button>
+
+                        <!-- Register -->
+                        <p>
+                            Inte registrerad?
+                            <a routerLink="/register"> Skapa konto här</a>
+                        </p>
+                    </form>
+                    <!-- Default form login -->
+
+                </div>
+                <!--Grid column-->
+            </div>
+            <!--Grid row-->
+        </section>
+        <!--Section: Content-->
+    </div>
+</div>

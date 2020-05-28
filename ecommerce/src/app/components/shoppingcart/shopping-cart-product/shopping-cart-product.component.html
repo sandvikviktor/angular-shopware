@@ -1,0 +1,34 @@
+<div class="cart-item">
+    <div class="p-2 d-flex justify-content-between align-items-center">
+        <div class="d-flex align-items-center">
+            <img [src]="item.product.image" class="img-fluid image-width" alt="">
+            <div>
+                <div>
+                    <strong>{{item.product.name}}</strong>
+                </div>
+                <div>
+                    <small>{{item.quantity}} x {{item.product.price}} SEK</small>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="btn-group btn-group-sm" role="group" aria-label="quantity">
+                <button type="button" class="btn btn-grey px-3" (click)="cartDecrement(item)">-</button>
+                <button
+                    type="button"
+                    class="btn btn-grey px-3"
+                    (click)="cartIncrement(item)"
+                >+</button>
+            </div>
+            <div class="btn-group btn-group-sm">
+                <button
+                    class="btn btn-red px-3"
+                    (click)="deleteFromCart(item.product._id)"
+                >
+                    <i class="fas fa-trash"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="dropdown-divider"></div>
+</div>

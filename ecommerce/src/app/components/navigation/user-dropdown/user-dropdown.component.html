@@ -1,0 +1,51 @@
+<div class="text-center">
+   
+   <!-- Inlogged -->
+   <ul *ngIf=(userInlogged) class="user-dropdown list-group list-group-flush p-0">
+      <li class="list-group-item">
+         <a routerLink="/account">
+            <div>
+               <i class="fas fa-user"></i>
+               <div>Mitt konto</div>
+            </div>
+         </a>
+      </li>
+      <li class="list-group-item">
+         <a routerLink="/orders">
+            <div>
+               <i class="fas fa-clipboard-list"></i>
+               <div>Mina ordrar</div>
+            </div>
+         </a>
+      </li>
+      <li class="list-group-item">
+         <a routerLink="/login">
+            <div (click)="userLogout()">
+               <i class="fas fa-sign-out-alt"></i>
+               <div>Logga ut</div>
+            </div>
+         </a>
+      </li>
+   </ul>
+
+   <!-- Not Inlogged -->
+   <ul *ngIf=(!userInlogged) class="list-group list-group-flush">
+      <li class="list-group-item">
+         <a routerLink="/register">
+            <div>
+               <i class="fas fa-user-plus"></i>
+               <div>Registrera</div>
+            </div>
+         </a>
+      </li>
+      <li class="list-group-item">
+         <a routerLink="/login">
+            <div>
+               <i class="fas fa-sign-in-alt"></i>
+               <div>Logga in</div>
+            </div>
+         </a>
+      </li>
+   </ul>
+
+</div>

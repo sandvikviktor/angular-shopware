@@ -1,0 +1,28 @@
+<div class="d-flex justify-content-between align-items-center">
+  <div class="d-flex">
+    <img [src]=item.product.image alt="" class="img-fluid z-depth-0 checkout-image-width">
+    <div class="d-flex flex-column justify-content-center">
+      <h5>
+        <strong>{{item.product.name}}</strong>
+      </h5>
+      <span>{{item.product.price}} x {{item.quantity}}</span>
+    </div>
+  </div>
+
+  <div>
+    <div class="btn-group btn-group-sm">
+      <button (click)=cartDecrement(item) type="button" class="btn btn-grey px-3">-</button>
+      <button (click)=cartIncrement(item) type="button" class="btn btn-grey px-3">+</button>
+      <div class="btn-group btn-group-sm">
+        <button (click)=deleteFromCart(item.product._id) type="button" class="btn btn-red px-3"
+          data-toggle="tooltip" data-placement="top" title="Remove item">
+          <i class="fas fa-trash"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+

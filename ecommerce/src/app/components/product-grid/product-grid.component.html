@@ -1,0 +1,5 @@
+<div class="row pt">
+    <div *ngFor="let product of productcatalog | async" class="col-lg-3 col-md-4">
+        <app-product-card [product]="product"></app-product-card>
+    </div>
+</div>
