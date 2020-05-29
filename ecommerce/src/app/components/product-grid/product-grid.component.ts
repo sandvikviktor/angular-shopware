@@ -3,7 +3,6 @@ import { Observable } from 'rxjs';
 import { IProduct } from 'src/app/models/iproduct.model';
 import { IState } from 'src/app/models/istate.model';
 import { Store } from '@ngrx/store';
-// import { ProductCardComponent } from '../product-card/product-card.component'
 
 @Component({
   selector: 'app-product-grid',
@@ -19,8 +18,5 @@ export class ProductGridComponent implements OnInit {
   ngOnInit(): void {
     this.productcatalog = this.store.select(store => store.productcatalog)
   }
-
-  // addToCart(product, quantity = 1) {
-
-  // }
+  
 }

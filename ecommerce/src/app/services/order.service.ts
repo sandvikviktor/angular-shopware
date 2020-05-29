@@ -12,7 +12,7 @@ export class OrderService {
   private _baseUrl:string = 'http://localhost:9999/api/orders/'
 
   constructor(private http: HttpClient, private store: Store<IState>) { }
-
+  
   saveOrder(order) {
     return this.http.post<any>(this._baseUrl + 'saveorder', { userId: order.userId, userName: order.userName, order: order.order, total: order.total, status: order.status }).subscribe(res => console.log(res))
   }

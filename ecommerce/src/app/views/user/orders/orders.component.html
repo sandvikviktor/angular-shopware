@@ -1,8 +1,6 @@
 <div id="orders" class="container pt">
-    
+    <h2 class="mb-4 text-center">Mina ordrar</h2>   
     <div *ngFor="let order of orders | async">
         <app-orders-product [order]="order"></app-orders-product>
     </div>
-
-
 </div>
